@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+    <head>
+        <title> Character Roller </title>
+    </head>
+
+<h2>Your D&D character is: </h2>
+
+
+<h1>A {{ race }} {{ class0 }} who is {{ trait }} </h1>
+<br>
+
+<a href="{{ url_for('index') }}">Roll your destiny</a>
+
+<br>
+
+<h2>Likely dead Characters</h2>
+
+{% for character in char %}
+Someone got a {{ character.Character_race}} {{ character.Character_class }}
+<br>_______________________________________________________________________________________<br><br>
+{% endfor %}
+
